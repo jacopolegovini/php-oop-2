@@ -1,3 +1,9 @@
+<?php
+include_once __DIR__ . "/./classes/Product.php";
+
+$product = new Product('prodotto', '...', 45, Category->);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +14,10 @@
 </head>
 
 <body>
-
+    <main>
+        <h1>Prodotti per animali</h1>
+        <?php var_dump() ?>
+    </main>
 </body>
 
 </html>
