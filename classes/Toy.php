@@ -7,7 +7,7 @@ class Toy extends Product
 
     public function __construct(string $typeOfToy, string $img, int $price, Category $category)
     {
-        parent::__construct('Cibo', $img, $price, $category);
+        parent::__construct('Giocattolo', $img, $price, $category);
         $this->typeOfToy = $typeOfToy;
     }
 }

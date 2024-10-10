@@ -7,7 +7,7 @@ class DogHouse extends Product
 
     public function __construct(string $material, string $img, int $price, Category $category)
     {
-        parent::__construct('Cibo', $img, $price, $category);
+        parent::__construct('Cuccia', $img, $price, $category);
         $this->material = $material;
     }
 }

@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . "/./classes/Product.php";
+include_once __DIR__ . "/./db/data.php";
 
 $product = new Product('prodotto', '...', 45, new Category('Cane'));
 ?>
@@ -16,7 +16,7 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
 <body>
     <main>
         <h1>Prodotti per animali</h1>
-        <?php var_dump($product) ?>
+        <?php var_dump($foods) ?>
     </main>
 </body>
 
