@@ -12,6 +12,6 @@ trait quantity
     public function isInStock()
     {
         if ($this->productQuantity > 0) return true;
-        return throw new Exception("Errore, pochi prodotti");
+        return throw new Exception("Quantità insufficiente");
     }
 }
