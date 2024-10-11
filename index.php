@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__ . "/./db/data.php";
 
-$product = new Product('prodotto', '...', 45, new Category('Cane'));
+
 
 ?>
 
@@ -29,7 +29,7 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                     <h2>Cibo</h2>
                     <div class="d-flex gap-3">
                         <?php foreach ($foods as $food) { ?>
-                            <div class="card <?php $food->isInStock() ? 'available' : 'not-available' ?>">
+                            <div class="card">
                                 <img src="<?= $food->img ?>" alt="...">
                                 <section>Tipologia di animale: <?= $food->category->title ?> </section>
                                 <section>Peso: <?= $food->animalWeight ?></section>
@@ -44,6 +44,14 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                                     }
                                     ?>
                                 </section>
+                                <form action="" method="GET">
+                                    <select name="" id="">
+                                        <?php for ($i = 0; $i < 10; $i++) { ?>
+                                            <option value="<?php $i + 1; ?>"><?php echo $i + 1; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                    <button class="btn btn-primary">Acquista</button>
+                                </form>
                             </div>
                         <?php } ?>
                     </div>
@@ -66,6 +74,8 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                                     }
                                     ?>
                                 </section>
+                                <button class="btn btn-primary">Acquista</button>
+
                             </div>
                         <?php } ?>
                     </div>
@@ -88,6 +98,8 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                                     }
                                     ?>
                                 </section>
+                                <button class="btn btn-primary">Acquista</button>
+
                             </div>
                         <?php } ?>
                     </div>
