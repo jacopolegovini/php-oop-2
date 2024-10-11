@@ -28,14 +28,21 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                 <div class="cards-food">
                     <h2>Cibo</h2>
                     <div class="d-flex gap-3">
-                        <?php foreach ($foods as $food) { ?>
+                        <?php foreach ($foods as $food) {
+                            if ($food->isInStock()) {
+                        ?>
+
                         <div class="card">
                             <img src="<?= $food->img ?>" alt="...">
                             <section>Tipologia di animale: <?= $food->category->title ?> </section>
                             <section>Peso: <?= $food->animalWeight ?></section>
                             <section>Prezzo: <?= $food->price ?>€</section>
                         </div>
-                        <?php } ?>
+                        <?php } else { ?>
+                        Non c'è prodotto.
+                        <?php }
+                        }
+                        ?>
                     </div>
                 </div>
                 <div class="cards-toy mt-4">

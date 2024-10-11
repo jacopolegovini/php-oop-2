@@ -8,4 +8,10 @@ trait quantity
     {
         $this->productQuantity = $productQuantity;
     }
+
+    public function isInStock()
+    {
+        if ($this->productQuantity > 0) return true;
+        return throw new Exception("Errore, pochi prodotti");
+    }
 }
