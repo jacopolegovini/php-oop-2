@@ -29,22 +29,22 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                     <h2>Cibo</h2>
                     <div class="d-flex gap-3">
                         <?php foreach ($foods as $food) { ?>
-                        <div class="card">
-                            <img src="<?= $food->img ?>" alt="...">
-                            <section>Tipologia di animale: <?= $food->category->title ?> </section>
-                            <section>Peso: <?= $food->animalWeight ?></section>
-                            <section>Prezzo: <?= $food->price ?>€</section>
-                            <section>
-                                <?php try {
+                            <div class="card <?php $food->isInStock() ? 'available' : 'not-available' ?>">
+                                <img src="<?= $food->img ?>" alt="...">
+                                <section>Tipologia di animale: <?= $food->category->title ?> </section>
+                                <section>Peso: <?= $food->animalWeight ?></section>
+                                <section>Prezzo: <?= $food->price ?>€</section>
+                                <section>
+                                    <?php try {
                                         if ($food->isInStock()) { ?>
-                                <p>Disponibile</p>
-                                <?php }
+                                            <p>Disponibile</p>
+                                    <?php }
                                     } catch (Exception $e) {
                                         echo $e->getMessage();
                                     }
                                     ?>
-                            </section>
-                        </div>
+                                </section>
+                            </div>
                         <?php } ?>
                     </div>
                 </div>
@@ -52,21 +52,21 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                     <h2>Giocattoli</h2>
                     <div class="d-flex gap-3">
                         <?php foreach ($toys as $toy) { ?>
-                        <div class="card">
-                            <img src="<?= $toy->img ?>" alt="...">
-                            <section>Tipologia di animale: <?= $toy->category->title ?> </section>
-                            <section>Prezzo: <?= $toy->price ?>€</section>
-                            <section>
-                                <?php try {
+                            <div class="card">
+                                <img src="<?= $toy->img ?>" alt="...">
+                                <section>Tipologia di animale: <?= $toy->category->title ?> </section>
+                                <section>Prezzo: <?= $toy->price ?>€</section>
+                                <section>
+                                    <?php try {
                                         if ($toy->isInStock()) { ?>
-                                <p>Disponibile</p>
-                                <?php }
+                                            <p>Disponibile</p>
+                                    <?php }
                                     } catch (Exception $e) {
                                         echo $e->getMessage();
                                     }
                                     ?>
-                            </section>
-                        </div>
+                                </section>
+                            </div>
                         <?php } ?>
                     </div>
                 </div>
@@ -74,21 +74,21 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                     <h2>Cucce</h2>
                     <div class="d-flex gap-3">
                         <?php foreach ($doghouses as $doghouse) { ?>
-                        <div class="card">
-                            <img src="<?= $doghouse->img ?>" alt="...">
-                            <section>Tipologia di animale: <?= $doghouse->category->title ?> </section>
-                            <section>Prezzo: <?= $doghouse->price ?>€</section>
-                            <section>
-                                <?php try {
+                            <div class="card">
+                                <img src="<?= $doghouse->img ?>" alt="...">
+                                <section>Tipologia di animale: <?= $doghouse->category->title ?> </section>
+                                <section>Prezzo: <?= $doghouse->price ?>€</section>
+                                <section>
+                                    <?php try {
                                         if ($doghouse->isInStock()) { ?>
-                                <p>Disponibile</p>
-                                <?php }
+                                            <p>Disponibile</p>
+                                    <?php }
                                     } catch (Exception $e) {
                                         echo $e->getMessage();
                                     }
                                     ?>
-                            </section>
-                        </div>
+                                </section>
+                            </div>
                         <?php } ?>
                     </div>
                 </div>
