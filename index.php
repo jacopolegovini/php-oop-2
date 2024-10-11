@@ -31,7 +31,7 @@ $product = new Product('prodotto', '...', 45, new Category('Cane'));
                         <div class="card">
                             <img src="<?= $food->img ?>" alt="...">
                             <section>Tipologia di animale: <?= $food->category->title ?> </section>
-                            <section>Peso: <?= $food->animalWeight ?>€</section>
+                            <section>Peso: <?= $food->animalWeight ?></section>
                             <section>Prezzo: <?= $food->price ?>€</section>
                         </div>
                         <?php } ?>

@@ -22,4 +22,9 @@ class Customer
         $this->workingCreditCard = false;
         if ($this->workingCreditCard = true) return true;
     }
+
+    public function getDiscount()
+    {
+        // if ($this->workingCreditCard) return 
+    }
 }
