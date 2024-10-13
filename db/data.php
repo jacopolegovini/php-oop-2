@@ -5,7 +5,7 @@ require_once __DIR__ . "/./../classes/Doghouse.php";
 
 
 // Food
-$kibble = new Food('Light', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXLdIa46322ZkagZNk_UGwDHFbQm9ln6IZQ&s', 40, 120, new Category('Cane'));
+$kibble = new Food('Light', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXLdIa46322ZkagZNk_UGwDHFbQm9ln6IZQ&s', 40, 12, new Category('Cane'));
 $meat = new Food('Medium/Heavy', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXLdIa46322ZkagZNk_UGwDHFbQm9ln6IZQ&s', 60, 21, new Category('Cane'));
 $fish = new Food('Light', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXLdIa46322ZkagZNk_UGwDHFbQm9ln6IZQ&s', 35, 0, new Category('Gatto'));
 

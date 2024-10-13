@@ -52,7 +52,7 @@ include_once __DIR__ . "/./functions/functions.php";
                             <?php if ($food->isInStock()) { ?>
                             <form action="" method="GET">
                                 <select name="quantity" id="quantity">
-                                    <?php for ($i = 0; $i < 10; $i++) { ?>
+                                    <?php for ($i = 0; $i < $food->productQuantity; $i++) { ?>
                                     <option value="<?= $i + 1; ?>"><?php echo $i + 1; ?></option>
                                     <?php } ?>
                                 </select>
